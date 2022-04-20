@@ -93,8 +93,8 @@ secondSubjectFirstArray = [3, 7, 8, 3, 6, 1];
 secondSubjectSecondArray = [1, 4, 5, 8];
 
 createLine();
-console.log(`First array for second subject : ${secondSubjectFirstArray}`);
-console.log(`Second array for second subject : ${secondSubjectSecondArray}`);
+console.log(`First array for second subject : ${secondSubjectFirstArray}. Should return 3.`);
+console.log(`Second array for second subject : ${secondSubjectSecondArray}. Should return 1.`);
 createLine();
 console.log('');
 
@@ -113,8 +113,8 @@ function checkView(arr) {
     }
     if (freeView) freeViewCounter++;
   }
-console.log(`Number of comparisons: ${counter}`);
-return freeViewCounter;
+  console.log(`Number of comparisons: ${counter}`);
+  return freeViewCounter;
 }
 
 createLine();
@@ -123,5 +123,30 @@ createLine();
 console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectFirstArray)}.`);
 createLine();
 console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectSecondArray)}.`);
+createLine();
+console.log('');
+
+// Exercise 3
+function checkViewBetter(arr) {
+  let counter = 0;
+  let freeViewCounter = 0;
+  let arrayLength = arr.length;
+  for (i = 0; i < arrayLength; i++) {
+    counter++;
+    let tempArray = arr.slice(i + 1);
+    if(Math.max(...tempArray) < arr[i]) {
+      freeViewCounter++
+    }
+  }
+  console.log(`Number of comparisons: ${counter}`);
+  return freeViewCounter;
+}
+
+createLine();
+console.log('Second subject, second exercise :');
+createLine();
+console.log(`Number of buildings with free view on sunset : ${checkViewBetter(secondSubjectFirstArray)}.`);
+createLine();
+console.log(`Number of buildings with free view on sunset : ${checkViewBetter(secondSubjectSecondArray)}.`);
 createLine();
 console.log('');
