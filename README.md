@@ -8,8 +8,8 @@
 ### Merge sort & 2 Custom sort algorythms in JavaScript
 
 - feel free to change the content in list.txt to test the merge.js program accuracy and efficiency.
-- to test merge.js : go into terminal and type ```node merge.js list.txt```
-- to test exercises.js : go into terminal and type ```node exercises.js```
+- to test merge.js : go into terminal, cd to this file's folder, and type ```node merge.js list.txt```
+- to test exercises.js : go into terminal, cd to this file's folder, and type ```node exercises.js```
 
 <div>
   <br/><br/>
