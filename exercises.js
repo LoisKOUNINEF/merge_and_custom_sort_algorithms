@@ -18,10 +18,10 @@ k4 = 28;
 console.log('');
 createLine();
 console.log(`Initial array for first subject : ${firstSubjectArray}`);
-console.log(`k1 value to test: ${k1} => should return true`);
-console.log(`k2 value to test: ${k2} => should return false`);
-console.log(`k3 value to test: ${k3} => should return true`);
-console.log(`k4 value to test: ${k4} => should return false`);
+console.log(`k1 value to test: ${k1}. Should return true.`);
+console.log(`k2 value to test: ${k2}. Should return false.`);
+console.log(`k3 value to test: ${k3}. Should return true.`);
+console.log(`k4 value to test: ${k4}. Should return false.`);
 createLine();
 console.log('');
 
@@ -45,13 +45,13 @@ function checkSum(arr, k) {
 createLine();
 console.log("First subject, first exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k1 ? ${checkSum(firstSubjectArray, k1)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSum(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k2 ? ${checkSum(firstSubjectArray, k2)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSum(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k3 ? ${checkSum(firstSubjectArray, k3)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSum(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k4 ? ${checkSum(firstSubjectArray, k4)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSum(firstSubjectArray, k4)}`);
 createLine();
 console.log('');
 
@@ -76,18 +76,48 @@ function checkSumBetter(arr, k) {
 createLine();
 console.log("First subject, second exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k1 ? ${checkSumBetter(firstSubjectArray, k1)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSumBetter(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k2 ? ${checkSumBetter(firstSubjectArray, k2)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSumBetter(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k3 ? ${checkSumBetter(firstSubjectArray, k3)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSumBetter(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k4 ? ${checkSumBetter(firstSubjectArray, k4)}`);
+console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSumBetter(firstSubjectArray, k4)}`);
 createLine();
 console.log('');
 
 // Exercise 5
+function checkSumBest(arr, k) {
+  let counter = 0;
+  let arrayLength = arr.length;
+  let tempArray = [];
+  for (i = 0; i < arrayLength; i++) {
+    counter++
+    let checkDiff = k - arr[i];
+    if (tempArray[checkDiff] !== undefined) {
+      console.log(`Number of comparisons: ${counter}`);
+      return true;
+    }
+    else {
+      tempArray[arr[i]] = '';
+    }
+  }
+  console.log(`Number of comparisons: ${counter}`);
+  return false;
+}
 
+createLine();
+console.log("First subject, third exercise :");
+createLine();
+console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSumBest(firstSubjectArray, k1)}`);
+createLine();
+console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSumBest(firstSubjectArray, k2)}`);
+createLine();
+console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSumBest(firstSubjectArray, k3)}`);
+createLine();
+console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSumBest(firstSubjectArray, k4)}`);
+createLine();
+console.log('');
 
 // Second subject
 
