@@ -99,7 +99,7 @@ function checkSumBest(arr, k) {
       return true;
     }
     else {
-      tempArray[arr[i]] = '';
+      tempArray[arr[i]] = [];
     }
   }
   console.log(`Number of comparisons: ${counter}`);
