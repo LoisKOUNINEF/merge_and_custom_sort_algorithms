@@ -86,6 +86,9 @@ console.log(`Does the array contain 2 numbers which sum is equal to k4 ? ${check
 createLine();
 console.log('');
 
+// Exercise 5
+
+
 // Second subject
 
 // Arrays used for second subject (exercises 2, 4, 6)
@@ -106,7 +109,7 @@ function checkView(arr) {
   for (i = 0; i < arrayLength; i++) {
     let freeView = true;
     for (j = i + 1; j < arrayLength; j++) {
-      counter++
+      counter++;
       if (arr[i] <= arr[j]) {
         freeView = false;
       }
@@ -126,7 +129,7 @@ console.log(`Number of buildings with free view on sunset : ${checkView(secondSu
 createLine();
 console.log('');
 
-// Exercise 3
+// Exercise 4
 function checkViewBetter(arr) {
   let counter = 0;
   let freeViewCounter = 0;
@@ -135,7 +138,7 @@ function checkViewBetter(arr) {
     counter++;
     let tempArray = arr.slice(i + 1);
     if(Math.max(...tempArray) < arr[i]) {
-      freeViewCounter++
+      freeViewCounter++;
     }
   }
   console.log(`Number of comparisons: ${counter}`);
@@ -150,3 +153,5 @@ createLine();
 console.log(`Number of buildings with free view on sunset : ${checkViewBetter(secondSubjectSecondArray)}.`);
 createLine();
 console.log('');
+
+// Exercise 6
