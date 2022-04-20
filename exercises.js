@@ -26,7 +26,7 @@ function checkSum(arr, k) {
   let counter = 0;
   let arrayLength = arr.length;
   for (i = 0; i < arrayLength; i++) {
-    for(j = i + 1; j < arrayLength; j++) {
+    for (j = i + 1; j < arrayLength - i; j++) {
       counter++;
       if (k == arr[i] + arr[j]) {
         console.log(`Number of comparisons: ${counter}`);
@@ -40,11 +40,46 @@ function checkSum(arr, k) {
 
 console.log("First subject, first exercise :");
 createLine();
-console.log(checkSum(firstSubjectArray, k1));
+console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k1)}`);
 createLine();
-console.log(checkSum(firstSubjectArray, k2));
+console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k2)}`);
 createLine();
-console.log(checkSum(firstSubjectArray, k3));
+console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k3)}`);
 createLine();
-console.log(checkSum(firstSubjectArray, k4));
+console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k4)}`);
+createLine();
+
+
+// Arrays used for second subject (exercises 2, 4, 6)
+secondSubjectFirstArray = [3, 7, 8, 3, 6, 1];
+secondSubjectSecondArray = [1, 4, 5, 8];
+
+createLine();
+console.log(`First array for second subject : ${secondSubjectFirstArray}`);
+console.log(`Second array for second subject : ${secondSubjectSecondArray}`);
+createLine();
+
+function checkView(arr) {
+  let counter = 0;
+  let arrayLength = arr.length;
+  let freeViewCounter = 0;
+  for (i = 0; i < arrayLength; i++) {
+    let freeView = true;
+    for (j = i + 1; j < arrayLength; j++) {
+      counter++
+      if (arr[i] <= arr[j]) {
+        freeView = false;
+      }
+    }
+    if (freeView) freeViewCounter++;
+  }
+console.log(`Number of comparisons: ${counter}`);
+return freeViewCounter;
+}
+
+console.log('Second subject, first exercise :');
+createLine();
+console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectFirstArray)}.`);
+createLine();
+console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectSecondArray)}.`);
 createLine();
