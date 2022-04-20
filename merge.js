@@ -1,3 +1,9 @@
+const createLine = () => {
+    let line = '';
+    for (let i = 0; i < 50; i++) { line += '*'; }
+    console.log(line);
+}
+
 const fs = require('fs');
 
 const fileName = process.argv[2];
@@ -13,7 +19,9 @@ catch (error) {
   console.error(error.message);
 }
 
+createLine()
 console.log(`Initial array : ${dataArray}`)
+createLine()
 
 class Result {
 
@@ -51,3 +59,4 @@ let mergeResult = new Result(dataArray);
 
 console.log(`Merge sort algorythm : ${mergeResult.counter} comparisons.`)
 console.log(mergeResult.sortedArray)
+createLine()
