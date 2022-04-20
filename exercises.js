@@ -13,14 +13,15 @@ k2 = 32;
 k3 = 25;
 k4 = 28;
 
+console.log('');
 createLine();
 console.log(`Initial array for first subject : ${firstSubjectArray}`);
-createLine();
 console.log(`k1 value to test: ${k1} => should return true`);
 console.log(`k2 value to test: ${k2} => should return false`);
 console.log(`k3 value to test: ${k3} => should return true`);
 console.log(`k4 value to test: ${k4} => should return false`);
 createLine();
+console.log('');
 
 function checkSum(arr, k) {
   let counter = 0;
@@ -38,16 +39,18 @@ function checkSum(arr, k) {
   return false;
 }
 
+createLine();
 console.log("First subject, first exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k1)}`);
+console.log(`Does the array contain 2 numbers which sum is equal to k1 ? ${checkSum(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k2)}`);
+console.log(`Does the array contain 2 numbers which sum is equal to k2 ? ${checkSum(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k3)}`);
+console.log(`Does the array contain 2 numbers which sum is equal to k3 ? ${checkSum(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers which sum is equal to k ? ${checkSum(firstSubjectArray, k4)}`);
+console.log(`Does the array contain 2 numbers which sum is equal to k4 ? ${checkSum(firstSubjectArray, k4)}`);
 createLine();
+console.log('');
 
 
 // Arrays used for second subject (exercises 2, 4, 6)
@@ -58,6 +61,7 @@ createLine();
 console.log(`First array for second subject : ${secondSubjectFirstArray}`);
 console.log(`Second array for second subject : ${secondSubjectSecondArray}`);
 createLine();
+console.log('');
 
 function checkView(arr) {
   let counter = 0;
@@ -77,9 +81,11 @@ console.log(`Number of comparisons: ${counter}`);
 return freeViewCounter;
 }
 
+createLine();
 console.log('Second subject, first exercise :');
 createLine();
 console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectFirstArray)}.`);
 createLine();
 console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectSecondArray)}.`);
 createLine();
+console.log('');
