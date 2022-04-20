@@ -17,11 +17,13 @@ k4 = 28;
 
 console.log('');
 createLine();
-console.log(`Initial array for first subject : ${firstSubjectArray}`);
+createLine();
+console.log(`Initial array for first subject : ${firstSubjectArray}.`);
 console.log(`k1 value to test: ${k1}. Should return true.`);
 console.log(`k2 value to test: ${k2}. Should return false.`);
 console.log(`k3 value to test: ${k3}. Should return true.`);
 console.log(`k4 value to test: ${k4}. Should return false.`);
+createLine();
 createLine();
 console.log('');
 
@@ -33,25 +35,25 @@ function checkSum(arr, k) {
     for (j = i + 1; j < arrayLength - i; j++) {
       counter++;
       if (k == arr[i] + arr[j]) {
-        console.log(`Number of comparisons: ${counter}`);
+        console.log(`Number of comparisons: ${counter}.`);
         return true;
       }
     }
   }
-  console.log(`Number of comparisons: ${counter}`);
+  console.log(`Number of comparisons: ${counter}.`);
   return false;
 }
 
 createLine();
 console.log("First subject, first exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSum(firstSubjectArray, k1)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k1} ? ${checkSum(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSum(firstSubjectArray, k2)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k2} ? ${checkSum(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSum(firstSubjectArray, k3)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k3} ? ${checkSum(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSum(firstSubjectArray, k4)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k4} ? ${checkSum(firstSubjectArray, k4)}`);
 createLine();
 console.log('');
 
@@ -65,24 +67,24 @@ function checkSumBetter(arr, k) {
     counter++;
     let checkDiff = k - arr[i];
     if (tempArray.includes(checkDiff)) {
-      console.log(`Number of comparisons: ${counter}`);
+      console.log(`Number of comparisons: ${counter}.`);
       return true;
     }
   }
-  console.log(`Number of comparisons: ${counter}`);
+  console.log(`Number of comparisons: ${counter}.`);
   return false
 }
 
 createLine();
 console.log("First subject, second exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSumBetter(firstSubjectArray, k1)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k1} ? ${checkSumBetter(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSumBetter(firstSubjectArray, k2)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k2} ? ${checkSumBetter(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSumBetter(firstSubjectArray, k3)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k3} ? ${checkSumBetter(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSumBetter(firstSubjectArray, k4)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k4} ? ${checkSumBetter(firstSubjectArray, k4)}`);
 createLine();
 console.log('');
 
@@ -92,30 +94,30 @@ function checkSumBest(arr, k) {
   let arrayLength = arr.length;
   let tempArray = [];
   for (i = 0; i < arrayLength; i++) {
-    counter++
+    counter++;
     let checkDiff = k - arr[i];
     if (tempArray[checkDiff] !== undefined) {
-      console.log(`Number of comparisons: ${counter}`);
+      console.log(`Number of comparisons: ${counter}.`);
       return true;
     }
     else {
       tempArray[arr[i]] = [];
     }
   }
-  console.log(`Number of comparisons: ${counter}`);
+  console.log(`Number of comparisons: ${counter}.`);
   return false;
 }
 
 createLine();
 console.log("First subject, third exercise :");
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k1 ? ${checkSumBest(firstSubjectArray, k1)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k1} ? ${checkSumBest(firstSubjectArray, k1)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k2 ? ${checkSumBest(firstSubjectArray, k2)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k2} ? ${checkSumBest(firstSubjectArray, k2)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k3 ? ${checkSumBest(firstSubjectArray, k3)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k3} ? ${checkSumBest(firstSubjectArray, k3)}`);
 createLine();
-console.log(`Does the array contain 2 numbers whose sum is equal to k4 ? ${checkSumBest(firstSubjectArray, k4)}`);
+console.log(`Does [${firstSubjectArray}] contain 2 numbers whose sum is equal to ${k4} ? ${checkSumBest(firstSubjectArray, k4)}`);
 createLine();
 console.log('');
 
@@ -126,8 +128,10 @@ secondSubjectFirstArray = [3, 7, 8, 3, 6, 1];
 secondSubjectSecondArray = [1, 4, 5, 8];
 
 createLine();
+createLine();
 console.log(`First array for second subject : ${secondSubjectFirstArray}. Should return 3.`);
 console.log(`Second array for second subject : ${secondSubjectSecondArray}. Should return 1.`);
+createLine();
 createLine();
 console.log('');
 
@@ -146,16 +150,16 @@ function checkView(arr) {
     }
     if (freeView) freeViewCounter++;
   }
-  console.log(`Number of comparisons: ${counter}`);
+  console.log(`Number of comparisons: ${counter}.`);
   return freeViewCounter;
 }
 
 createLine();
 console.log('Second subject, first exercise :');
 createLine();
-console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectFirstArray)}.`);
+console.log(`Number of buildings with open view on sunset : ${checkView(secondSubjectFirstArray)}.`);
 createLine();
-console.log(`Number of buildings with free view on sunset : ${checkView(secondSubjectSecondArray)}.`);
+console.log(`Number of buildings with open view on sunset : ${checkView(secondSubjectSecondArray)}.`);
 createLine();
 console.log('');
 
@@ -171,17 +175,41 @@ function checkViewBetter(arr) {
       freeViewCounter++;
     }
   }
-  console.log(`Number of comparisons: ${counter}`);
+  console.log(`Number of comparisons: ${counter}.`);
   return freeViewCounter;
 }
 
 createLine();
 console.log('Second subject, second exercise :');
 createLine();
-console.log(`Number of buildings with free view on sunset : ${checkViewBetter(secondSubjectFirstArray)}.`);
+console.log(`Number of buildings with open view on sunset : ${checkViewBetter(secondSubjectFirstArray)}.`);
 createLine();
-console.log(`Number of buildings with free view on sunset : ${checkViewBetter(secondSubjectSecondArray)}.`);
+console.log(`Number of buildings with open view on sunset : ${checkViewBetter(secondSubjectSecondArray)}.`);
 createLine();
 console.log('');
 
 // Exercise 6
+function checkViewBest(arr) {
+  let counter = 0;
+  let arrayLength = arr.length;
+  let freeViewCounter = 1;
+  let highestBuilding = arr[arrayLength - 1];
+  for (i = arrayLength - 2; i > - 1; i--) {
+    counter++;
+    if (arr[i] > highestBuilding) {
+      highestBuilding = arr[i];
+      freeViewCounter++;
+    }
+  }
+  console.log(`Number of comparisons: ${counter}.`);
+  return freeViewCounter;
+}
+
+createLine();
+console.log('Second subject, third exercise :');
+createLine();
+console.log(`Number of buildings with open view on sunset : ${checkViewBest(secondSubjectFirstArray)}.`);
+createLine();
+console.log(`Number of buildings with open view on sunset : ${checkViewBest(secondSubjectSecondArray)}.`);
+createLine();
+console.log('');
